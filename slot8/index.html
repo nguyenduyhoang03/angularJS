@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJS - AngularJS practical Assignment</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="app" ng-controller="userCtrl">
+<div class="container">
+    <div class="form-control">
+        <form name="myForm">
+            <!-- link to show user list -->
+            <a href="#" ng-click="showUserList = true">User List</a>
+            <!-- user list -->
+            <div ng-show="showUserList" ng-init="getUserList()">
+            <h2>User List:</h2>
+            <ul>
+             <li ng-repeat="user in users">{{user.name}} - {{user.email}}</li>
+            </ul>
+            </div>
+
+            <!-- name -->
+            <strong>Name:</strong> <br>
+            <input type="text" name="name" ng-model="user.name" placeholder="Enter Name" required> <br>
+            <div ng-messages="myForm.name.$error" ng-if="myForm.name.$touched">
+                <div ng-message="required">Name is required</div>
+            </div>
+            <!-- email -->
+            <strong>Email:</strong> <br>
+            <input type="email" name="email" ng-model="user.email" placeholder="Enter Email" required> <br>
+            <div ng-messages="myForm.email.$error" ng-if="myForm.email.$touched">
+                <div ng-message="required">Email is required</div>
+            </div>
+            <!--password -->
+            <strong>password:</strong> <br>
+            <input type="password" name="password" ng-model="user.password" placeholder="Enter Password" required> <br>
+            <div ng-messages="myForm.name.$error" ng-if="myForm.name.$touched">
+                <div ng-message="required">Password is required</div>
+            </div>
+            <!-- phone -->
+            <strong>phone:</strong> <br>
+            <input type="number" name="phone" ng-model="user.phone" placeholder="Enter Phone" required> <br>
+            <div ng-messages="myForm.name.$error" ng-if="myForm.name.$touched">
+                <div ng-message="required">phone is required</div>
+            </div>
+            <!-- button -->
+            <button type="button" ng-click="saveUser(user)" ng-disabled="myForm.$invalid">Submit</button>            
+        </form>
+    </div>
+</div>
+</body>
+</html>

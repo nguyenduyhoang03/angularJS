@@ -1,0 +1,47 @@
+form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    height: 100vh;
+    
+}
+strong{
+    padding-top: 20px;
+}
+input {
+    height: 25px;
+    border-radius: 8px;
+}
+.btn{
+    padding-top: 18px;
+}
+.submit{
+    color: black;
+    background-color: white;
+    width: 80px;
+    height: 35px;
+    border-radius: 8px;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.cancel{
+    color: white;
+    background-color: #2196F3;
+    width: 80px;
+    height: 35px;
+    border-radius: 8px;
+}
+.valid {
+    border: 3px solid green;
+}
+  
+.invalid {
+    border: 3px solid red;
+}
+.submit:hover{
+    background-color: #2196F3;
+}
+  

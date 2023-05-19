@@ -1,0 +1,14 @@
+form{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    width: 50%;
+    height: 750px;
+    background-color: blanchedalmond;
+    padding-top: ;
+}
+input[type="text"],input[type="email"],
+input[type="password"],input[type="number"] {
+    border-radius: 8px;
+    height: 28px;
+}

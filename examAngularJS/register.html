@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register form</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-messages.js"></script>
+    <script src="app.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-app="app" ng-controller="registerCtrl">
+    <div class="container">
+        <h1>Registration</h1>
+        <form name="myRegister">
+            <!-- username -->
+            <strong>Username*</strong>
+            <input type="text" name="username" placeholder="Enter username" ng-model="user.username" 
+            required ng-class="{'valid': myRegister.username.$valid, 'invalid': myRegister.username.$invalid}">
+            <div ng-messages="myRegister.username.$error" ng-if="myRegister.username.$touched">
+                <div ng-message="required">Username is required</div>
+            </div>
+            <!-- password -->
+            <strong>password*</strong>
+            <input type="password" name="password" placeholder="password" ng-model="user.password" required
+            required ng-class="{'valid': myRegister.password.$valid, 'invalid': myRegister.password.$invalid}">  
+            <div ng-messages="myRegister.password.$error" ng-if="myRegister.password.$touched">
+                <div ng-message="required">Password is required</div>
+            </div>       
+            <!-- repeart password -->
+            <strong>Repeat Password</strong>
+            <input type="password" name="repeat_password" placeholder="Repeat password" ng-model="user.repeat_password" required
+            required ng-class="{'valid': myRegister.repeat_password.$valid, 'invalid': myRegister.repeat_password.$invalid}">
+            <div ng-messages="myRegister.repeat_password.$error" ng-if="myRegister.repeat_password.$touched">
+                <div ng-message="required">Repeat password is required</div>
+            </div>
+            <!-- email -->
+            <strong>Email*</strong>
+            <input type="email" name="email" placeholder="abc@gmail.com" ng-model="user.email" required
+            required  ng-class="{'valid': myRegister.username.$valid, 'invalid': myRegister.username.$invalid}">
+            <div ng-messages="myRegister.email.$error" ng-if="myRegister.email.$touched">
+                <div ng-message="required">Email is required</div>
+            </div>
+            <!-- submit -->
+            <div class="btn">
+                <button ng-click="register()" ng-disabled="myRegister.$invalid" class="submit">Submit</button>
+                <button class="cancel"><a href="login.html">Cancel</a></button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
