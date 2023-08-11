@@ -1,0 +1,7 @@
+id: 5
+name: Green Cacti
+price: 18.00
+quantity: 50
+desc: 
+Green cacti are succulent plants with thick, water-storing stems and spines. They're native to arid regions and come in various shapes and sizes. They thrive in bright sunlight, require infrequent watering, and prefer well-draining soil. These low-maintenance plants add a touch of nature to indoor spaces.
+

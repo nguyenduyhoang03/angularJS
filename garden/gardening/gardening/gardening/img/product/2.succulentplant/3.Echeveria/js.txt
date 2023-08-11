@@ -1,0 +1,6 @@
+id: 6
+name: Echeveria
+price: 20.00
+quantity: 55
+desc: Echeveria are rosette-shaped succulent plants admired for their stunning appearance. With fleshy leaves and a variety of colors like green, blue, pink, and purple, they create a striking visual. These low-maintenance plants prefer bright light, well-draining soil, and sporadic watering. They're popular in gardens and as indoor decor, adding elegance to any space.
+
